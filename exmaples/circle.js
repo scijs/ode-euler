@@ -1,6 +1,6 @@
 'use strict'
 
-var Euler = require('../lib')
+var euler = require('../lib')
 
 var dydt = function(dydt, y, t) {
   dydt[0] = -y[1]
@@ -12,7 +12,7 @@ var n = 1000
 var t0 = 0
 var dt = 2.0 * Math.PI / n
 
-var integrator = new Euler( y0, dydt, t0, dt )
+var integrator = euler( y0, dydt, t0, dt )
 
 // Integrate 1000 steps:
 integrator.steps(n)
