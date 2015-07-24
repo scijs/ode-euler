@@ -15,7 +15,7 @@ describe("euler integration", function() {
 
     y0 = new Float64Array([1,0]);
 
-    integrator = euler( f, y0, 0, 1 );
+    integrator = euler( y0, f, 0, 1 );
   });
 
   it("takes a single timestep",function() {
@@ -49,7 +49,7 @@ describe("euler integration with binding of extra data", function() {
 
     y0 = new Float64Array([1,0]);
 
-    integrator = euler( f, y0, 0, 1 );
+    integrator = euler( y0, f, 0, 1 );
   });
 
   it("takes a single timestep",function() {

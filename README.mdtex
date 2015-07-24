@@ -5,11 +5,11 @@
 
 ## Introduction
 
-This module integrates a system of ordinary differential equations of the form <p align="center"><img alt="undefined" valign="middle" src="images/yt-ft-yt-fae25965d3.png" width="151.5" height="25"></p> <p align="center"><img alt="undefined" valign="middle" src="images/yt_0-y_0-42d14f447f.png" width="91.5" height="24"></p> where <img alt="undefined" valign="middle" src="images/y-adb83ba1d7.png" width="14.5" height="16.5"> is a vector of length <img alt="undefined" valign="middle" src="images/n-66e1b1ee17.png" width="16" height="13">. Given time step <img alt="undefined" valign="middle" src="images/delta-t-9813ae7971.png" width="28" height="18">, the Euler method integrates the ODE with update <p align="center"><img alt="undefined" valign="middle" src="images/y_n1-y_n-ft_n-y_n-delta-t-7e1ddc48e6.png" width="221" height="24"></p>
+This module integrates a system of ordinary differential equations of the form $$ y'(t) &=& f(t, y(t)),$$ $$y(t_0) = y_0$$ where $y$ is a vector of length $n$. Given time step $\Delta t$, the Euler method integrates the ODE with update $$y_{n+1} = y_{n} + f(t_n, y_n) \Delta t.$$
 
 ## Install
 
-```sh
+```bash
 $ npm install ode-euler
 ```
 
@@ -42,13 +42,11 @@ integrator.steps(n)
 ## API
 
 ### `require('ode-euler')( y0, deriv, t0, dt )`
-Create a new integrator object.
-
 **Arguments:**
 - `y0`: an array or typed array containing initial conditions. This vector is updated in-place with each integrator step.
 - `deriv`: a function that calculates the derivative. Format is `function( dydt, y, t )`. Inputs are current state `y` and current time `t`, output is calcualted derivative `dydt`.
-- `t0`: initial time <img alt="undefined" valign="middle" src="images/t-3f19307093.png" width="11.5" height="16.5">.
-- `dt`: time step <img alt="undefined" valign="middle" src="images/delta-t-9813ae7971.png" width="28" height="18">.
+- `t0`: initial time $t$.
+- `dt`: time step $\Delta t$.
 
 **Returns**:
 Initialized integrator object.
@@ -58,7 +56,7 @@ Initialized integrator object.
 - `y`: current state. Initialized as a shallow copy of input `y0`.
 - `deriv`: function that calcualtes derivative. Initialized from input. May be changed.
 - `t`: current time, incremented by `dt` with each time step.
-- `dt`: time step <img alt="undefined" valign="middle" src="images/delta-t-9813ae7971.png" width="28" height="18">. Initialized from input `dt`. May be changed.
+- `dt`: time step $\Delta t$. Initialized from input `dt`. May be changed.
 
 **Methods:**
 - `.step()`: takes a single step of the Euler integrator and stores the result in-place in the `y` property.
