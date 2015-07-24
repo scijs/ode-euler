@@ -16,7 +16,7 @@ $ npm install ode-euler
 ## Example
 
 ```javascript
-var euler = require('../lib')
+var euler = require('ode-euler')
 
 var deriv = function(dydt, y, t) {
   dydt[0] = -y[1]

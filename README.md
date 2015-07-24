@@ -9,14 +9,14 @@ This module integrates a system of ordinary differential equations of the form <
 
 ## Install
 
-```sh
+```bash
 $ npm install ode-euler
 ```
 
 ## Example
 
 ```javascript
-var euler = require('../lib')
+var euler = require('ode-euler')
 
 var deriv = function(dydt, y, t) {
   dydt[0] = -y[1]
@@ -42,8 +42,6 @@ integrator.steps(n)
 ## API
 
 ### `require('ode-euler')( y0, deriv, t0, dt )`
-Create a new integrator object.
-
 **Arguments:**
 - `y0`: an array or typed array containing initial conditions. This vector is updated in-place with each integrator step.
 - `deriv`: a function that calculates the derivative. Format is `function( dydt, y, t )`. Inputs are current state `y` and current time `t`, output is calcualted derivative `dydt`.
