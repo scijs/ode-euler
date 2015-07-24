@@ -11,7 +11,13 @@
     "url": "git://github.com/scijs/ode-euler.git"
   },
   "keywords": [
-    "scijs"
+    "scijs",
+    "ode",
+    "euler",
+    "integration",
+    "differential-equations",
+    "calculus",
+    "first-order"
   ],
   "author": "Ricky Reusser",
   "license": "MIT",
