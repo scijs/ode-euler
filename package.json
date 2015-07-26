@@ -30,8 +30,5 @@
     "gulp-tap": "^0.1.3",
     "mocha": "^2.2.5"
   },
-  "dependencies": {
-    "compute-array-constructors": "^1.0.0",
-    "compute-dtype": "^1.0.0"
-  }
+  "dependencies": {}
 }
