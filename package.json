@@ -1,6 +1,6 @@
 {
   "name": "ode-euler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Integrate a system of ODEs using the Euler method",
   "main": "lib/index.js",
   "scripts": {
