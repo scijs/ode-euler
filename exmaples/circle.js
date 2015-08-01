@@ -17,6 +17,8 @@ var integrator = euler( y0, dydt, t0, dt )
 // Integrate 1000 steps:
 integrator.steps(n)
 
+console.log(integrator.y)
+
 // Integrate all the way around a circle:
 // => integrator.y = [ 1.0199349143076457, -0.00008432969374211775 ]
 

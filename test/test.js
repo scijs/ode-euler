@@ -124,7 +124,7 @@ Object.keys(ctors).forEach(function(dtype) {
 
     describe('convergence', function() {
 
-      it('location truncation error is order O(h^2)', function() {
+      it('local truncation error is order O(h^2)', function() {
         var result = richardson(function(h) {
 
           // Integrate along a sector of a circle:
