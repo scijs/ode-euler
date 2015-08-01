@@ -28,11 +28,11 @@ Object.keys(ctors).forEach(function(dtype) {
         integrator = euler( y0, f, t0, 1/n )
       })
 
-      it('creates work arrays of the same size as the input',function() {
+      it('creates work arrays of the same type as the input',function() {
         assert.equal( integrator._yp.constructor,  y0.constructor )
       })
 
-      it('creates work arrays of the same type as the input',function() {
+      it('creates work arrays of the same length as the input',function() {
         assert.equal( integrator._yp.length,  y0.length )
       })
 
@@ -58,11 +58,11 @@ Object.keys(ctors).forEach(function(dtype) {
         integrator = euler( y0, f, t0, 1 )
       })
 
-      it('creates work arrays of the same size as the input',function() {
+      it('creates work arrays of the same type as the input',function() {
         assert.equal( integrator._yp.constructor,  y0.constructor )
       })
 
-      it('creates work arrays of the same type as the input',function() {
+      it('creates work arrays of the same length as the input',function() {
         assert.equal( integrator._yp.length,  y0.length )
       })
 
